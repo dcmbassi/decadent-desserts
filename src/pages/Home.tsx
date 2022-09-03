@@ -1,8 +1,14 @@
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
+    return (
+        <>
+            <h1>Decadent Desserts</h1>
+            <div>Home</div>
+            {/* Hero section */}
+            {/* Search bar */}
+            {/* Categories */}
+        </>
+    )
 }
 
 export default Home
