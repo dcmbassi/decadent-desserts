@@ -25,6 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .logo img {
@@ -40,4 +41,16 @@
     justify-content: space-between;
     list-style-type: none;
     gap: 2rem;
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.productCard {
+    border-radius: 8px;
+    padding-inline: 1rem;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
 }
