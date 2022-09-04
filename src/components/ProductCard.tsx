@@ -1,3 +1,4 @@
+import { useCart } from "../context/CartContext"
 import { Product } from "../data/products"
 
 type CardProps = {
@@ -5,6 +6,8 @@ type CardProps = {
 }
 
 const ProductCard = ({ product }: CardProps) => {
+    const {getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeItem} = useCart()
+    const quantity = getItemQuantity(product.id)
     return (
         <div className="productCard">
             <div className="cardInfo">
@@ -12,14 +15,14 @@ const ProductCard = ({ product }: CardProps) => {
                 <p>{product.price}</p>
             </div>
             <div className="cardActions">
-                <div className="cartManip">
-                    <button className="cartQuantity">-</button>
-                    <div>2</div>
-                    <button className="cartQuantity">+</button>
-                </div>
+                {!!quantity && <div className="cartManip">
+                    <button className="cartQuantity" onClick={() => decreaseItemQuantity(product.id)}>-</button>
+                    <div>{quantity}</div>
+                    <button className="cartQuantity" onClick={() => increaseItemQuantity(product.id)}>+</button>
+                </div>}
                 <div className="cardMainAction">
-                    <button className="cardMainAction">Ajouter au panier</button>
-                    <button className="cardMainAction">Retirer du panier</button>
+                    {!!!quantity && <button className="cardMainAction" onClick={() => increaseItemQuantity(product.id)}>Ajouter au panier</button>}
+                    {!!quantity && <button className="cardMainAction" onClick={() => removeItem(product.id)}>Retirer du panier</button>}
                 </div>
             </div>
         </div>
