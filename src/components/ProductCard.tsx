@@ -1,5 +1,6 @@
 import { useCart } from "../context/CartContext"
 import { Product } from "../data/products"
+import { formatCurrency } from "../utils/formatCurrency"
 
 type CardProps = {
     product: Product
@@ -12,7 +13,7 @@ const ProductCard = ({ product }: CardProps) => {
         <div className="productCard">
             <div className="cardInfo">
                 <h4>{product.name}</h4>
-                <p>{product.price}</p>
+                <p>{formatCurrency(product.price)}</p>
             </div>
             <div className="cardActions">
                 {!!quantity && <div className="cartManip">
