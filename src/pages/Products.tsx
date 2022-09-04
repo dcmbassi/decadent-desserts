@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import ProductCard from "../components/ProductCard"
 import SearchBar from "../components/SearchBar"
 import { products } from "../data/products"
 
@@ -22,10 +23,7 @@ const Products = () => {
             <div className="productGrid">
                 {!!displayedProducts.length
                     ? displayedProducts.map(product => (
-                        <div className="productCard" key={product.id}>
-                            <h4>{product.name}</h4>
-                            <p>{product.price}</p>
-                        </div>
+                        <ProductCard key={product.id} product={product} />
                     ))
                     : <p>Aucun produit ne correspond à votre recherche.</p>
                 }
