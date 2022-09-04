@@ -7,7 +7,7 @@ type CardProps = {
 }
 
 const ProductCard = ({ product }: CardProps) => {
-    const {getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeItem} = useCart()
+    const { getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeItem } = useCart()
     const quantity = getItemQuantity(product.id)
     return (
         <div className="productCard">
@@ -16,14 +16,40 @@ const ProductCard = ({ product }: CardProps) => {
                 <p>{formatCurrency(product.price)}</p>
             </div>
             <div className="cardActions">
-                {!!quantity && <div className="cartManip">
-                    <button className="cartQuantity" onClick={() => decreaseItemQuantity(product.id)}>-</button>
-                    <div>{quantity}</div>
-                    <button className="cartQuantity" onClick={() => increaseItemQuantity(product.id)}>+</button>
-                </div>}
+                {!!quantity && (
+                    <div className="cartManip">
+                        <button
+                            className="cartQuantity"
+                            onClick={() => decreaseItemQuantity(product.id)}
+                        >
+                            -
+                        </button>
+                        <div>{quantity}</div>
+                        <button
+                            className="cartQuantity"
+                            onClick={() => increaseItemQuantity(product.id)}
+                        >
+                            +
+                        </button>
+                    </div>
+                )}
                 <div className="cardMainAction">
-                    {!!!quantity && <button className="cardMainAction" onClick={() => increaseItemQuantity(product.id)}>Ajouter au panier</button>}
-                    {!!quantity && <button className="cardMainAction" onClick={() => removeItem(product.id)}>Retirer du panier</button>}
+                    {!!!quantity && (
+                        <button
+                            className="cardMainAction"
+                            onClick={() => increaseItemQuantity(product.id)}
+                        >
+                            Ajouter au panier
+                        </button>
+                    )}
+                    {!!quantity && (
+                        <button
+                            className="cardMainAction"
+                            onClick={() => removeItem(product.id)}
+                        >
+                            Retirer du panier
+                        </button>
+                    )}
                 </div>
             </div>
         </div>
