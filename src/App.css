@@ -51,8 +51,35 @@
 
 .productCard {
     border-radius: 8px;
-    padding-inline: 1rem;
+    padding: 1rem;
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardActions {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+}
+
+.cartManip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+.cardMainAction {
+    margin-top: auto;
 }
 
 .search {
