@@ -69,6 +69,7 @@
     flex-direction: column;
     gap: .5rem;
     align-items: center;
+    margin-top: auto;
 }
 
 .cartManip {
