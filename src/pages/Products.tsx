@@ -20,12 +20,15 @@ const Products = () => {
             <h2>Products</h2>
             <SearchBar handleSearch={handleSearch} />
             <div className="productGrid">
-                {displayedProducts.map(product => (
-                    <div className="productCard" key={product.id}>
-                        <h4>{product.name}</h4>
-                        <p>{product.price}</p>
-                    </div>
-                ))}
+                {!!displayedProducts.length
+                    ? displayedProducts.map(product => (
+                        <div className="productCard" key={product.id}>
+                            <h4>{product.name}</h4>
+                            <p>{product.price}</p>
+                        </div>
+                    ))
+                    : <p>Aucun produit ne correspond à votre recherche.</p>
+                }
             </div>
         </>
     )
