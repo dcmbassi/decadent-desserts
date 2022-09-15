@@ -23,9 +23,9 @@
 
 .mainNav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+    gap: 2rem;
 }
 
 .logo img {
@@ -41,6 +41,37 @@
     justify-content: space-between;
     list-style-type: none;
     gap: 2rem;
+}
+
+.cartButton {
+    margin-left: auto;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 999px;
+    padding: 0;
+    position: relative;
+}
+
+.cartButton::after {
+    content: attr(data-value);
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    translate: 25% 25%;
+    right: 0;
+    bottom: 0;
+    border-radius: 999px;
+    background-color: #ff0000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartButton img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
 }
 
 .productGrid {
@@ -96,4 +127,21 @@
     margin: 0 auto;
     border-radius: 8px;
     outline: none;
+}
+
+.cart {
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    overflow: auto;
+    background-color: #242424;
+    padding: 1rem;
+    border-left: 2px solid #404040;
+}
+
+.cart.hidden  {
+    display: none;
 }
