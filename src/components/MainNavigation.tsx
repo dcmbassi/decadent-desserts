@@ -1,7 +1,10 @@
 import ddLogo from '../img/dd_logo.jpeg'
+import cart from '../img/cart.png'
 import { Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 
 const MainNavigation = () => {
+    const { openCart, cartQuantity } = useCart()
     return (
         <nav className="mainNav">
             <div className="logo">
@@ -18,6 +21,11 @@ const MainNavigation = () => {
                     <li className='navItem'>About</li>
                 </Link>
             </ul>
+            {!!cartQuantity && (
+                <button onClick={openCart} className='cartButton' data-value={cartQuantity}>
+                    <img src={cart} alt='Shopping cart' />
+                </button>
+            )}
         </nav>
     )
 }
