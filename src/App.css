@@ -140,8 +140,10 @@
     background-color: #242424;
     padding: 1rem;
     border-left: 2px solid #404040;
+    transition: right 350ms ease-in-out;
 }
 
 .cart.hidden  {
-    display: none;
+    /* display: none; */
+    right: -100%;
 }

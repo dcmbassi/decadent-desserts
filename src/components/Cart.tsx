@@ -1,5 +1,5 @@
 import { useCart } from '../context/CartContext'
-import CartItem from './Cartitem'
+import CartItem from './CartItem'
 
 type CartProps = {
     isOpen: boolean
