@@ -12,6 +12,13 @@ const ProductCard = ({ product }: CardProps) => {
     return (
         <div className="productCard">
             <div className="cardInfo">
+                <div className="cardImage">
+                    <img
+                        src={product.imageUrl}
+                        alt={product.name}
+                        className='productCardImage'
+                    />
+                </div>
                 <h4>{product.name}</h4>
                 <p>{formatCurrency(product.price)}</p>
             </div>
