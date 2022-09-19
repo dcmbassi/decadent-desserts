@@ -17,7 +17,7 @@ const CartItem = ({ id, quantity }: CartItemProps) => {
             <div className="item">
                 {item.imageUrl && (
                     <div className="itemImage">
-                        <img src={item.imageUrl} style={{width: '120px', height: '80px', objectFit: 'cover'}} />
+                        <img src={item.imageUrl} />
                     </div>
                 )}
                 <div className="itemData">
