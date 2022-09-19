@@ -5,6 +5,7 @@ import Products from './pages/Products'
 import About from './pages/About'
 import MainNavigation from './components/MainNavigation'
 import { CartProvider } from './context/CartContext'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -18,7 +19,9 @@ function App() {
                     <Route path='/products' element={<Products />} />
                     <Route path='/about' element={<About />} />
                 </Routes>
+
             </div>
+            <Footer />
         </CartProvider>
     )
 }
