@@ -2,6 +2,7 @@ import { useCart } from '../context/CartContext'
 import { formatCurrency } from '../utils/formatCurrency'
 import { products } from '../data/products'
 import CartItem from './CartItem'
+import React from 'react'
 
 type CartProps = {
     isOpen: boolean
@@ -12,9 +13,16 @@ const Cart = ({ isOpen }: CartProps) => {
     const cartClassName = isOpen ? 'cart' : 'cart hidden'
     const overayClassName = isOpen ? 'cartOverlay' : '' 
 
+    const handleOutsideInteraction = (e: React.MouseEvent<HTMLElement>) => {
+        closeCart()
+    }
+    const stopEventPropagation = (e: React.MouseEvent<HTMLElement>) => {
+        e.stopPropagation()
+    }
+
     return (
-        <div className={overayClassName}>
-            <div className={cartClassName}>
+        <div className={overayClassName} onClick={handleOutsideInteraction}>
+            <div className={cartClassName} onClick={stopEventPropagation}>
                 <div className="cartHeader">
                     <h3>Pannier</h3>
                     <button onClick={closeCart}>&times;</button>
