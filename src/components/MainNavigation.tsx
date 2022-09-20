@@ -12,13 +12,13 @@ const MainNavigation = () => {
             </div>
             <ul className='navMenu'>
                 <NavLink to='/'>
-                    <li className='navItem'>Home</li>
+                    <li className='navItem'>Accueil</li>
                 </NavLink>
                 <NavLink to='/products'>
-                    <li className='navItem'>Products</li>
+                    <li className='navItem'>Produits</li>
                 </NavLink>
                 <NavLink to='/about'>
-                    <li className='navItem'>About</li>
+                    <li className='navItem'>A propos</li>
                 </NavLink>
             </ul>
             {!!cartQuantity && (
