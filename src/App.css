@@ -43,6 +43,27 @@
     gap: 2rem;
 }
 
+.navMenu li {
+    padding-inline: .5rem;
+    text-align: center;
+    letter-spacing: .5px;
+    position: relative;
+}
+
+.navMenu a {
+    text-decoration: none;
+}
+
+.navMenu a.active li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 5px;
+    background-color: #808080;
+}
+
 .cartButton {
     margin-left: auto;
     width: 3.5rem;
