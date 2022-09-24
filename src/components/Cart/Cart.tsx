@@ -1,7 +1,7 @@
 import { useCart } from '../../context/CartContext'
 import { formatCurrency } from '../../utils/formatCurrency'
 import { products } from '../../data/products'
-import CartItem from '../CartItem'
+import CartItem from '../CartItem/CartItem'
 import React from 'react'
 import styles from './Cart.module.css'
 
