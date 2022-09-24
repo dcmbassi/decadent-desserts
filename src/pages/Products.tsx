@@ -14,7 +14,7 @@ const Products = () => {
     }, [search])
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearch(e.target.value)
+        setSearch(e.target.value.toLowerCase())
     }
     return (
         <>
