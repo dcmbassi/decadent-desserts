@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import ProductCard from "../components/ProductCard/ProductCard"
-import SearchBar from "../components/SearchBar/SearchBar"
-import { products } from "../data/products"
+import ProductCard from "../../components/ProductCard/ProductCard"
+import SearchBar from "../../components/SearchBar/SearchBar"
+import { products } from "../../data/products"
 
 const Products = () => {
     const [search, setSearch] = useState('')
