@@ -24,7 +24,7 @@ const Cart = ({ isOpen }: CartProps) => {
         <div className={overayClassName} onClick={handleOutsideInteraction}>
             <div className={cartClassName} onClick={stopEventPropagation}>
                 <div className="cartHeader">
-                    <h3>Pannier</h3>
+                    <h3>Panier</h3>
                     <button onClick={closeCart}>&times;</button>
                 </div>
                 <div className="cartContent">
