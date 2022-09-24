@@ -1,8 +1,9 @@
+import styles from '../styles/Home.module.css'
 
 const Home = () => {
     return (
         <>
-            <h1>Decadent Desserts</h1>
+            <h1 className={styles.heading}>Decadent Desserts</h1>
             <div>Home</div>
             {/* Hero section */}
             {/* Search bar */}
