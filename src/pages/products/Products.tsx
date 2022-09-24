@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import SearchBar from "../../components/SearchBar/SearchBar"
 import { products } from "../../data/products"
+import styles from './Products.module.css'
 
 const Products = () => {
     const [search, setSearch] = useState('')
@@ -20,7 +21,7 @@ const Products = () => {
         <>
             <h2>Products</h2>
             <SearchBar handleSearch={handleSearch} />
-            <div className="productGrid">
+            <div className={styles.productGrid}>
                 {!!displayedProducts.length
                     ? displayedProducts.map(product => (
                         <ProductCard key={product.id} product={product} />
