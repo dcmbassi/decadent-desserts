@@ -52,6 +52,7 @@
 
 .navMenu a {
     text-decoration: none;
+    color: inherit
 }
 
 .navMenu a.active li::after {
