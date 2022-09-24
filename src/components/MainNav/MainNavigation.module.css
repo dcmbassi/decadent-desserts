@@ -32,7 +32,7 @@
     color: inherit
 }
 
-.navMenu a.active li::after {
+.navMenu a:global(.active) li::after {
     content: '';
     position: absolute;
     left: 0;
