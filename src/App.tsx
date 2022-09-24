@@ -5,7 +5,7 @@ import Products from './pages/Products'
 import About from './pages/About'
 import MainNavigation from './components/MainNavigation'
 import { CartProvider } from './context/CartContext'
-import Footer from './components/Footer'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
