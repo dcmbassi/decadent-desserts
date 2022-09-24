@@ -1,3 +1,5 @@
+import styles from './SearchBar.module.css'
+
 
 type SearchProps = {
     handleSearch: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -5,7 +7,7 @@ type SearchProps = {
 
 const SearchBar = ({handleSearch}: SearchProps) => {
   return (
-    <div className="search">
+    <div className={styles.search}>
         <input type="text" name="searchedProduct" onChange={handleSearch} />
     </div>
   )
