@@ -1,5 +1,5 @@
-import ddLogo from '../img/dd_logo.jpeg'
-import cart from '../img/cart.png'
+import ddLogo from '../../img/dd_logo.jpeg'
+import cart from '../../img/cart.png'
 import { NavLink } from 'react-router-dom'
 import { useCart } from '../../context/CartContext'
 
