@@ -1,6 +1,6 @@
-import { useCart } from "../context/CartContext"
-import { Product } from "../data/products"
-import { formatCurrency } from "../utils/formatCurrency"
+import { useCart } from "../../context/CartContext"
+import { Product } from "../../data/products"
+import { formatCurrency } from "../../utils/formatCurrency"
 
 type CardProps = {
     product: Product
