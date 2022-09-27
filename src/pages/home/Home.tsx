@@ -11,7 +11,9 @@ const Home = () => {
                     <p className={styles.tagline}>Unapologetically delicious</p>
                 </div>
             </header>
-            {/* Hero section */}
+            <section className={styles.quote}>
+                <p>Vous n'avez jamais rien goûté d'aussi bon!</p>
+            </section>
             {/* Search bar */}
             {/* Categories */}
         </>
