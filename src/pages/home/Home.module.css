@@ -9,8 +9,9 @@
     animation: fade 800ms ease-in;
 }
 
+
 .textFade {
-    animation: text-fade 600ms ease-in 700ms;
+    animation: fade 600ms linear 800ms;
 }
 
 @keyframes fade {
@@ -29,6 +30,10 @@
         opacity: 0;
         translate: 0 -50px;
     }
+    /* 40% {
+        opacity: .4;
+        translate: 0 -30px;
+    } */
     100% {
         opacity: 1;
         translate: 0 0;
@@ -54,3 +59,10 @@
 .tagline {
     font-size: 2em;
 }
+
+.quote {
+    margin-top: 2rem;
+    position: relative;
+    padding-inline: .5rem;
+}
+
